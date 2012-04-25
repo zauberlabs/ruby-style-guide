@@ -569,33 +569,6 @@ syntax.
     end
     ```
 
-## Comments
-
-> Good code is its own best documentation. As you're about to add a
-> comment, ask yourself, "How can I improve the code so that this
-> comment isn't needed?" Improve the code and then document it to make
-> it even clearer. <br/>
-> -- Steve McConnell
-
-* Write self-documenting code and ignore the rest of this section. Seriously!
-* Comments longer than a word are capitalized and use punctuation. Use [one
-  space](http://en.wikipedia.org/wiki/Sentence_spacing) after periods.
-* Avoid superfluous comments.
-
-    ```Ruby
-    # bad
-    counter += 1 # increments counter by one
-    ```
-
-* Keep existing comments up-to-date. An outdated is worse than no comment
-at all.
-
-> Good code is a like a good joke - it needs no explanation. <br/>
-> -- Russ Olsen
-
-* Avoid writing comments to explain bad code. Refactor the code to
-  make it self-explanatory. (Do or do not - there is no try.)
-
 ## Annotations
 
 * Annotations should usually be written on the line immediately above
@@ -638,11 +611,6 @@ at all.
 
 ## Classes
 
-* When designing class hierarchies make sure that they conform to the
-  [Liskov Substitution Principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle).
-* Try to make your classes as
-  [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design\))
-  as possible.
 * Always supply a proper `to_s` method for classes that represent
   domain objects.
 
@@ -1216,9 +1184,6 @@ patch them.)
 
 * Write `ruby -w` safe code.
 * Avoid hashes as optional parameters. Does the method do too much?
-* Avoid methods longer than 10 LOC (lines of code). Ideally, most methods will be shorter than
-  5 LOC. Empty lines do not contribute to the relevant LOC.
-* Avoid parameter lists longer than three or four parameters.
 * If you really have to, add "global" methods to Kernel and make them private.
 * Use class instance variables instead of global variables.
 
@@ -1239,9 +1204,8 @@ patch them.)
 * Avoid `alias` when `alias_method` will do.
 * Use `OptionParser` for parsing complex command line options and
 `ruby -s` for trivial command line options.
-* Code in a functional way, avoiding mutation when that makes sense.
-* Avoid needless metaprogramming.
-* Do not mutate arguments unless that is the purpose of the method.
-* Avoid more than three levels of block nesting.
-* Be consistent. In an ideal world, be consistent with these guidelines.
-* Use common sense.
+
+
+
+
+
